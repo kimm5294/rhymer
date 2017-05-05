@@ -15,3 +15,11 @@ def logged_in
     return false
   end
 end
+
+def requires_owner(owner_id)
+  if owner_id.to_i == session[:current_user_id].to_i
+    puts "correct"
+  else
+    redirect '/login'
+  end
+end
