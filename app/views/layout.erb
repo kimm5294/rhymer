@@ -14,12 +14,18 @@
 <body>
 
   <header>
+    <h1 id="title-header">Rhyme Or Get Rhymed On</h1>
     <nav>
       <a href="/">Home</a> |
-        <% if logged_in %>
-          <a href="/users/<%=current_user.id %>"></a>
-        <% else %>
-        <% end %>
+      <% if logged_in %>
+        <a href="/users/<%=current_user.id %>"><%=current_user.username %></a> |
+        <form method="post" action='/logout'>
+          <input type="submit" value="Logout">
+        </form>
+      <% else %>
+        <a href="/users/new">Register</a> |
+        <a href="/login">Login</a>
+      <% end %>
     </nav>
   </header>
 

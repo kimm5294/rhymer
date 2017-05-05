@@ -9,5 +9,9 @@ def requires_login
 end
 
 def logged_in
-  return true if current_user else false
+  if current_user
+    return true
+  else
+    return false
+  end
 end
