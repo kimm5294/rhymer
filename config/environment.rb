@@ -17,6 +17,7 @@ require 'logger'
 
 require 'datamuse'
 require 'bcrypt'
+require 'tts'
 
 require 'sinatra'
 require "sinatra/reloader" if development?

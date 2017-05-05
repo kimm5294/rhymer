@@ -1,0 +1,17 @@
+img {
+  display: inline;
+  border: solid 3px;
+}
+
+#title-header {
+  display: inline;
+  border: solid 3px;
+}
+
+#logos {
+  margin: -5px;
+  background-color: blue;
+  font-family: Didot;
+  font-weight: bold;
+  border: solid 3px;
+}

@@ -15,9 +15,6 @@ post '/users' do
 end
 
 get '/users/:id' do
-  puts params[:id]
-  puts "!!!!!!!!!!!!!!!!!!!"
-  puts session[:current_user_id]
   requires_owner(params[:id])
   erb :'users/show'
 end
