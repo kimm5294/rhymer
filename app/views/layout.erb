@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>Rhyme or Get Rhymed On</title>
+</head>
+
+<body>
+
+  <header>
+    <div id="logos">
+    <h1 id="title-header">Rhyme Or Get Rhymed On</h1>
+    <img src="images/logo.png">
+    </div>
+    <nav>
+      <a href="/">Home</a> |
+      <% if logged_in %>
+        <a href="/users/<%=current_user.id %>"><%=current_user.username %></a> |
+        <form method="post" action='/logout'>
+          <input type="submit" value="Logout">
+        </form>
+      <% else %>
+        <a href="/users/new">Register</a> |
+        <a href="/login">Login</a>
+      <% end %>
+    </nav>
+  </header>
+
+  <%= yield %>
+
+</body>
+</html>

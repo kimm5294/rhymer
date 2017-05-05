@@ -1,0 +1,18 @@
+<div class="rhyme-zone">
+  <h3>Enter a Word to Find Your Rhyme, if you got the time</h3>
+
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%=error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <form id="rhyme-word-form" method="post" action="/words">
+    <input type="text" name="word" placeholder="Word to Rhyme">
+    <input type="submit" value="Find Yo Rhyme">
+  </form>
+  <div class="rhymes-go-here">
+  </div>
+</div>

@@ -1,0 +1,9 @@
+  <h3>Here are yo rhymes to belt out some sweet chimes for the word: <%=@word %></h3>
+
+  <ul>
+    <% @rhymes.each do |rhyme| %>
+      <li><%=rhyme %></li>
+      <% %x( say #{rhyme} ) %>
+
+    <% end %>
+  </ul>
